@@ -1,0 +1,344 @@
+*{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+        }
+
+
+
+/* Textos */
+
+     
+     @font-face {
+             font-family:'letrasofia-regular.otf';
+             src: url(../FUENTES/letrasofia-regular.otf);
+             font-weight: normal;
+             font-style: normal;
+           }
+     
+      @font-face {
+             font-family:'Vercetti-Regular.ttf';
+             src: url(../FUENTES/Vercetti-Regular.ttf);
+             font-weight: normal;
+             font-style: normal;
+           }
+       
+     
+     p {font-family:'Vercetti-Regular.ttf';
+             font-size: 18px;
+             color: #8C7E72;
+     }
+     
+     h1    {font-family: 'letrasofia-regular.otf', serif;
+             font-size: 60px;
+             color: rgba(255, 251, 251, 0.788);
+     }
+     
+     h2 {font-family: 'letrasofia-regular.otf', serif;
+             font-size: 60px;
+             color: brown;
+     }
+     
+     h3 {font-family: 'letrasofia-regular.otf', serif;
+             font-size: 60px;
+             color: brown;
+     }
+     
+     ul {font-family: 'Vercetti-Regular.ttf';
+             font-size: 18px;
+             list-style: none;
+     }
+     
+     footer p
+     {font-family:'Vercetti-Regular.ttf';
+             font-size: 10px;
+     
+     }
+     
+     footer a
+     {font-family:'Vercetti-Regular.ttf';
+             font-size: 10px;
+             color: brown;
+             text-decoration: none;
+
+     }
+     
+     .nav a
+     {font-family: 'letrasofia-regular.otf', serif;
+             font-size: 45px;
+             color: brown;
+     }
+     
+     .nav-fondo a
+     {font-family: 'letrasofia-regular.otf', serif;
+             font-size: 45px;
+             color: rgba(255, 251, 251, 0.788);
+       
+     }
+     
+     a {text-decoration: none; 
+           }
+     
+
+      /* página films */
+
+#films 
+{text-align: center;
+  
+}
+
+#films ul {font-family:'Vercetti-Regular.ttf';
+        font-size: 18px;
+    }
+
+
+    /* página bio */
+    
+main {
+        top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; 
+        padding: 20px;
+} 
+
+.residencias
+{font-family:'Vercetti-Regular.ttf';
+        font-size: 18px;
+        width: 30%;
+        height: auto;
+        padding: 20px;
+        padding-top: 50px;
+        }
+
+.formacion
+{font-family:'Vercetti-Regular.ttf';
+        font-size: 18px;
+        width: 30%;
+        height: auto;
+        padding: 20px;
+        padding-top: 50px;
+        }
+.bio
+{width: 70%;
+        height: auto;
+        padding: 20px; 
+        padding-top: 50px;              
+        }
+
+.premios 
+        {font-family:'Vercetti-Regular.ttf';
+        font-size: 18px;
+        width: 30%;
+        padding: 20px;
+        padding-top: 50px;
+        }   
+
+.foto1bio
+{width: 18.1875rem; 
+        height: 10.25rem; 
+       }
+
+.foto2bio 
+{width: auto;
+        height: 10.25rem;
+        }
+
+.foto3bio 
+{width: 13.125rem; 
+        height: auto; 
+        }
+.foto4bio 
+{width: 13.125rem; 
+        height: auto; 
+        }
+
+.foto5bio 
+{width: auto; 
+        height: 10.25rem; 
+        }
+
+.foto6bio 
+{width: 13.125rem; 
+        height: auto; 
+        }
+
+
+
+    /* página home */
+
+.fondo
+{width: 300px;
+height: 300px;
+position: absolute;
+
+right: 20px; 
+  top: 50%; 
+}
+
+
+/* Pagina Maids grid */
+
+body {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columnas de igual tamaño */
+        grid-template-rows: 100vh; /* Altura completa de la pantalla */
+        overflow: hidden; /* Evita el desplazamiento */
+    }
+
+    .foto-fondo {
+        grid-column: 1 / -1; /* Ocupa todas las columnas */
+        grid-row: 1 / -1; /* Ocupa todas las filas */
+        z-index: 1; /* Asegura que esté detrás del contenido */
+    }
+
+    .foto-fondo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+    }
+
+    body:not(.pagina-home)::before {
+        content: "";
+        grid-column: 2 / -1; /* Cubre las últimas 3 columnas (2, 3 y 4) */
+        grid-row: 1 / -1; /* Cubre toda la altura */
+        background-color: #0D0D0D; /* Color del cuadrado */
+        z-index: 2; /* Asegura que esté sobre el fondo */
+    }
+
+
+    .nav {
+        grid-column: 1 / 2; /* Ocupa la primera columna */
+        grid-row: 1 / -1; /* Ocupa toda la altura */
+        z-index: 3; /* Asegura que esté sobre el fondo y el cuadrado */
+        padding: 20px; /* Espaciado interno */
+        display: flex;
+        flex-direction: column; /* Coloca los ítems en columna */
+        align-items: flex-start; /* Alinea los ítems a la izquierda */
+    }
+
+    .nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* Coloca los ítems en columna */
+        gap: 16px;
+    }
+
+.nav ul li {
+        position: relative; 
+    }
+    
+.nav .dropdown-item:hover {
+        background-color: #f8f9fa; 
+    }
+
+
+.nav .dropdown-toggle::after {
+        display: none; 
+    }
+
+
+    .nav .dropdown-menu {
+        display: none; /* Oculta el dropdown por defecto */
+        position: absolute;
+        top: 100%; /* Coloca el dropdown debajo del ítem */
+        left: 0;
+        background-color: #ffffff; /* Color de fondo del dropdown */
+        border: 1px solid #ddd; /* Borde del dropdown */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+        z-index: 1000; /* Asegura que esté sobre otros elementos */
+        width: 300px;
+    }
+
+
+.nav .dropdown-menu a {
+    padding: 8px 16px; /* Espaciado interno */
+    color: #333; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado */
+    display: block; /* Hace que los enlaces ocupen todo el ancho */
+}
+    
+    .nav .dropdown:hover .dropdown-menu {
+        display: block; /* Muestra el dropdown al hacer hover */
+    }
+
+    .container-films {
+        grid-column: 2 / -1; /* Ocupa las últimas 3 columnas */
+        grid-row: 1 / -1; /* Ocupa toda la altura */
+        z-index: 3; /* Asegura que esté sobre el fondo y el cuadrado */
+        padding: 20px; /* Espaciado interno */
+        display: grid;
+        grid-template-rows: auto auto auto; /* Dos filas de altura automática */
+        grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual tamaño */
+        gap: 16px; /* Espacio entre elementos */
+        grid-template-areas: 
+            "info-films info-films ." 
+            "sinopsis-films sinopsis-films ."
+            "imagenes-films imagenes-films imagenes-films";
+        overflow-y: auto; /* Permite el desplazamiento vertical */
+        max-height: 100vh; /* Limita la altura al viewport */
+    }
+
+    .info-films {
+        grid-area: info-films; 
+        padding: 10px; 
+    }
+    
+    .sinopsis-films {
+        grid-area: sinopsis-films; 
+        padding: 10px; 
+    }
+    
+    .imagenes-films {
+        grid-area: imagenes-films; 
+        padding: 10px; 
+    }
+    
+    .fotos-cortos {
+        max-width: 100%; 
+        height: auto; 
+    }
+
+.footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+
+}
+
+.footer ul {
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 16px;
+    }
+
+
+/* Imágenes */
+
+.fotos-cortos {
+        width: 26.1875rem;
+        height: 14.75rem;
+}
+
+.romperhome {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+.logo {
+        width: auto;
+        height: 30px;
+}
