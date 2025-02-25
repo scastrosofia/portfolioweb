@@ -14,32 +14,29 @@
 
 </head>
 <body>
-    <header>
-        <section class="nav">
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./Bio.html">Bio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Films
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="./romperelespanol.html">Romper el Español</a></li>
-                            <li><a class="dropdown-item" href="./maids.html">Maids</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <img class="logo" src="./FOTOS/Logo.png">
-        </section>
-</header>
 
-<section id="bio">
+    <div class="foto-fondo">
+        <img src="./FOTOS/romperhome.png" alt="" class="romperhome">
+    </div>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./Bio.html">Bio</a></li>
+            <li class="dropdown">
+                <a href="./films.html" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Films</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./romperelespanol.html">Romper el Español</a></li>
+                    <li><a href="./maids.html">Maids</a></li>
+                    <li><a class="dropdown-item" href="./films.html">Ver todos los films</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+<section class="container-bio">
+<article class="bio">
     <h2>Bio</h2>
     <p>Sofía Castro es una artista multidisciplinaria y curadora
         argentina especializada en videodanza y
@@ -58,8 +55,8 @@
         jornadas sobre la práctica curatorial en latinoamérica de
         la UNLP.
     </p>
-</section>
-<section id="residencias">
+</article>
+<article class="residencias">
     <h3>Residencias</h3>
     <p>Sofía ha sido artista residente y participado de:</p>
     <ul>
@@ -74,8 +71,8 @@
         <li>VideodanzaBA Lab (Buenos Aires, 2018)</li>
 
     </ul>
-</section>
-<section id="formacion">
+</article>
+<article class="formacion">
     <h3>Formación</h3>
     <ul>
         <li>Licenciatura en Artes Electrónicas (Universidad Nacional de Tres de Febrero)</li>
@@ -84,21 +81,23 @@
         <li>Dirección de arte para cine y televisión (Universidad del cine de Buenos Aires)</li>
 
     </ul>
-</section>
-<section id="premios">
+</article>
+<article class="premios">
     <h2>Premios</h2>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At molestiae, expedita iusto ipsa possimus magnam ullam explicabo provident facilis accusamus similique voluptate rem architecto laborum omnis et exercitationem quis eum?
     </p>
-</section>
+</article>
 
+<article class="imagenes-bio">
 <img class="foto1bio" src="./FOTOS/residencias1.png" alt="">
 <img class="foto2bio" src="./FOTOS/residencia2.jpg" alt="">
 <img class="foto3bio" src="./FOTOS/residencias3.png" alt="">
 <img class="foto4bio" src="./FOTOS/residencias4.png" alt="">
 <img class="foto5bio" src="./FOTOS/residencias5.png" alt="">
-
+</article>
 
 </section>
+
 
 <footer>
     <p>Todos los derechos reservados</p>

@@ -47,6 +47,7 @@
      ul {font-family: 'Vercetti-Regular.ttf';
              font-size: 18px;
              list-style: none;
+             color: #8C7E72;
      }
      
      footer p
@@ -80,16 +81,7 @@
            }
      
 
-      /* página films */
 
-#films 
-{text-align: center;
-  
-}
-
-#films ul {font-family:'Vercetti-Regular.ttf';
-        font-size: 18px;
-    }
 
 
     /* página bio */
@@ -105,33 +97,24 @@ main {
 .residencias
 {font-family:'Vercetti-Regular.ttf';
         font-size: 18px;
-        width: 30%;
-        height: auto;
-        padding: 20px;
-        padding-top: 50px;
+        
         }
 
 .formacion
 {font-family:'Vercetti-Regular.ttf';
         font-size: 18px;
-        width: 30%;
-        height: auto;
-        padding: 20px;
-        padding-top: 50px;
+        
         }
 .bio
 {width: 70%;
         height: auto;
-        padding: 20px; 
-        padding-top: 50px;              
+                    
         }
 
 .premios 
         {font-family:'Vercetti-Regular.ttf';
         font-size: 18px;
-        width: 30%;
-        padding: 20px;
-        padding-top: 50px;
+        
         }   
 
 .foto1bio
@@ -183,104 +166,138 @@ body {
         margin: 0;
         padding: 0;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columnas de igual tamaño */
-        grid-template-rows: 100vh; /* Altura completa de la pantalla */
-        overflow: hidden; /* Evita el desplazamiento */
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr auto; 
+        min-height: 100vh; 
+        overflow: hidden; 
     }
 
     .foto-fondo {
-        grid-column: 1 / -1; /* Ocupa todas las columnas */
-        grid-row: 1 / -1; /* Ocupa todas las filas */
-        z-index: 1; /* Asegura que esté detrás del contenido */
+        grid-column: 1 / -1; 
+        grid-row: 1 / -1; 
+        z-index: 1; 
     }
 
     .foto-fondo img {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+        object-fit: cover; 
     }
 
     body:not(.pagina-home)::before {
         content: "";
-        grid-column: 2 / -1; /* Cubre las últimas 3 columnas (2, 3 y 4) */
-        grid-row: 1 / -1; /* Cubre toda la altura */
-        background-color: #0D0D0D; /* Color del cuadrado */
-        z-index: 2; /* Asegura que esté sobre el fondo */
+        grid-column: 2 / -1; 
+        grid-row: 1 / -1; 
+        background-color: #0D0D0D; 
+        z-index: 2; 
     }
 
 
     .nav {
-        grid-column: 1 / 2; /* Ocupa la primera columna */
-        grid-row: 1 / -1; /* Ocupa toda la altura */
-        z-index: 3; /* Asegura que esté sobre el fondo y el cuadrado */
-        padding: 20px; /* Espaciado interno */
+        grid-column: 1 / 2; 
+        grid-row: 1 / -1; 
+        z-index: 3; 
+        padding: 20px; 
         display: flex;
-        flex-direction: column; /* Coloca los ítems en columna */
-        align-items: flex-start; /* Alinea los ítems a la izquierda */
+        flex-direction: column; 
+        align-items: flex-start; 
     }
-
+    
     .nav ul {
         list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
-        flex-direction: column; /* Coloca los ítems en columna */
+        flex-direction: column; 
         gap: 16px;
     }
-
-.nav ul li {
+    
+    .nav ul li {
         position: relative; 
     }
     
-.nav .dropdown-item:hover {
+    .nav .dropdown-item:hover {
         background-color: #f8f9fa; 
     }
-
-
-.nav .dropdown-toggle::after {
+    
+    .nav .dropdown-toggle::after {
         display: none; 
     }
-
-
+    
     .nav .dropdown-menu {
-        display: none; /* Oculta el dropdown por defecto */
+        display: none; 
         position: absolute;
-        top: 100%; /* Coloca el dropdown debajo del ítem */
+        top: 100%; 
         left: 0;
-        background-color: #ffffff; /* Color de fondo del dropdown */
-        border: 1px solid #ddd; /* Borde del dropdown */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-        z-index: 1000; /* Asegura que esté sobre otros elementos */
+        background-color: #ffffff; 
+        border: 1px solid #ddd; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        z-index: 1000; 
         width: 300px;
     }
-
-
-.nav .dropdown-menu a {
-    padding: 8px 16px; /* Espaciado interno */
-    color: #333; /* Color del texto */
-    text-decoration: none; /* Quita el subrayado */
-    display: block; /* Hace que los enlaces ocupen todo el ancho */
-}
+    
+    .nav .dropdown-menu a {
+        padding: 8px 16px; 
+        color: #333; 
+        text-decoration: none; 
+        display: block; 
+    }
     
     .nav .dropdown:hover .dropdown-menu {
-        display: block; /* Muestra el dropdown al hacer hover */
+        display: block; 
+    }
+    
+    /* Estilo para los enlaces en el navbar */
+    .nav ul li a {
+        color: rgba(255, 251, 251, 0.788); 
+        text-decoration: none; 
+        position: relative;
+    }
+    
+    .nav ul li a:hover {
+        color: #dc3545; 
+    }
+    
+    .nav ul li a:hover::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px; 
+        width: 100%;
+        height: 2px;
+        background-color: #dc3545; 
+    }
+    
+    /* Estilo para los enlaces en el dropdown */
+    .nav .dropdown-menu a:hover {
+        color: #dc3545; 
+    }
+    
+    .nav .dropdown-menu a:hover::after {
+        content: '';
+        position: absolute;
+        left: 16px; 
+        bottom: 8px; 
+        width: calc(100% - 32px); 
+        height: 2px;
+        background-color: #dc3545; 
     }
 
     .container-films {
-        grid-column: 2 / -1; /* Ocupa las últimas 3 columnas */
-        grid-row: 1 / -1; /* Ocupa toda la altura */
-        z-index: 3; /* Asegura que esté sobre el fondo y el cuadrado */
-        padding: 20px; /* Espaciado interno */
+        grid-column: 2 / -1; 
+        grid-row: 1 / 2; 
+        z-index: 3; 
+        padding: 20px; 
         display: grid;
-        grid-template-rows: auto auto auto; /* Dos filas de altura automática */
-        grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual tamaño */
-        gap: 16px; /* Espacio entre elementos */
+        grid-template-rows: auto auto auto; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap: 16px; 
         grid-template-areas: 
             "info-films info-films ." 
             "sinopsis-films sinopsis-films ."
             "imagenes-films imagenes-films imagenes-films";
-        overflow-y: auto; /* Permite el desplazamiento vertical */
-        max-height: 100vh; /* Limita la altura al viewport */
+        overflow-y: auto; 
+        max-height: 100vh; 
     }
 
     .info-films {
@@ -303,13 +320,16 @@ body {
         height: auto; 
     }
 
-.footer {
+    footer {
+        grid-column: 1 / -1; 
+        grid-row: 2 / 3; 
+        z-index: 4; 
+        background-color: #0D0D0D; 
+        padding: 10px; 
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
-
-}
+    }
 
 .footer ul {
 
@@ -320,6 +340,89 @@ body {
         gap: 16px;
     }
 
+
+/* Pagina Bio grid */
+
+.container-bio {
+        grid-column: 2 / -1; 
+    grid-row: 1 / 2; 
+    z-index: 3; 
+    padding: 20px; 
+    display: grid;
+        grid-template-rows: auto auto auto auto auto ; 
+        grid-template-columns: 1fr 1fr ; 
+        gap: 16px; 
+        grid-template-areas: 
+            "bio bio "
+         "bio bio "
+         "residencias premios"
+            "formacion formacion "
+            "imagenes-bio imagenes-bio";
+        overflow-y: auto; 
+        max-height: 100vh; 
+    }
+
+.bio {
+        grid-area: bio; 
+        padding: 10px; 
+    }
+
+
+.formacion
+{
+        grid-area: formacion; 
+        padding: 10px; 
+    }
+
+
+    .premios {
+        grid-area: premios; 
+        padding: 10px; 
+    }
+
+    .residencias {
+        grid-area: residencias; 
+        padding: 10px; 
+    }
+
+    .imagenes-bio {
+        grid-area: imagenes-bio; 
+        padding: 10px; 
+    } 
+
+
+      /* página films */
+
+      .container-cortos {
+        grid-column: 2 / -1; 
+        grid-row: 1 / 2;
+        z-index: 3; 
+        padding: 20px; 
+        display: grid;
+        grid-template-rows: auto auto; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 16px; 
+        grid-template-areas: 
+            "films films"
+            "fotos-cortos-films fotos-cortos-films";
+        overflow-y: auto; 
+        max-height: 100vh; 
+    }
+    
+
+.films {
+        grid-area: films; 
+        padding: 10px; 
+    }
+
+
+    .fotos-cortos-films {
+        grid-area: fotos-cortos-films; 
+        padding: 10px; 
+        display: flex;
+        gap: 16px; 
+        flex-wrap: wrap; 
+    }
 
 /* Imágenes */
 
@@ -342,3 +445,164 @@ body {
         width: auto;
         height: 30px;
 }
+
+/* Media Query para Maids */
+@media (max-width: 767px) {
+        body {
+            grid-template-columns: 1fr; 
+            grid-template-rows: auto auto auto; 
+        }
+    
+        .foto-fondo {
+            grid-column: 1 / -1; 
+            grid-row: 1 / 2; 
+        }
+    
+        .nav {
+            grid-column: 1 / -1; 
+            grid-row: 1 / 2; 
+            padding: 10px; 
+        }
+    
+        .container-films {
+            grid-column: 1 / -1; 
+            grid-row: 2 / 3; 
+            grid-template-rows: auto auto auto; 
+            grid-template-columns: 1fr; 
+            grid-template-areas: 
+                "info-films"
+                "sinopsis-films"
+                "imagenes-films";
+            padding: 10px; 
+        }
+    
+        footer {
+            grid-column: 1 / -1; 
+            grid-row: 3 / 4;
+        }
+
+        .container-films, .container-bio {
+                z-index: 10; 
+            }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        body {
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: auto auto; 
+        }
+    
+        .foto-fondo {
+            grid-column: 1 / -1; 
+            grid-row: 1 / 2; 
+        }
+    
+        .nav {
+            grid-column: 1 / 2; 
+            grid-row: 1 / 2; 
+
+        }
+    
+        .container-films {
+            grid-column: 2 / -1; 
+            grid-row: 1 / 2; 
+            grid-template-rows: auto auto; 
+            grid-template-columns: 1fr; 
+            grid-template-areas: 
+                "info-films"
+                "sinopsis-films"
+                "imagenes-films";
+            padding: 15px; 
+        }
+    
+        footer {
+            grid-column: 1 / -1; 
+            grid-row: 2 / 3; 
+        }
+
+        .container-films, .container-bio {
+                z-index: 10; 
+            }
+    }
+
+    /* Media Query para Bio */
+@media (max-width: 767px) {
+        body {
+            grid-template-columns: 1fr; 
+            grid-template-rows: auto auto auto; 
+        }
+    
+        .foto-fondo {
+            grid-column: 1 / -1; 
+            grid-row: 1 / 2; 
+        }
+    
+        .nav {
+            grid-column: 1 / -1; 
+            grid-row: 1 / 2; 
+            padding: 10px; 
+        }
+    
+        .container-bio {
+            grid-column: 1 / -1; 
+            grid-row: 2 / 3; 
+            grid-template-rows: auto auto auto auto auto; 
+            grid-template-columns: 1fr; 
+            grid-template-areas: 
+                "bio"
+                "residencias"
+                "premios"
+                "formacion"
+                "imagenes-bio";
+            padding: 10px; 
+        }
+    
+        footer {
+            grid-column: 1 / -1; 
+            grid-row: 3 / 4; 
+        }
+
+        .container-films, .container-bio {
+                z-index: 10; 
+            }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        body {
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: auto auto; 
+        }
+    
+        .foto-fondo {
+            grid-column: 1 / -1; 
+            grid-row: 1 / 2; 
+        }
+    
+        .nav {
+            grid-column: 1 / 2; 
+            grid-row: 1 / 2; 
+        }
+    
+        .container-bio {
+            grid-column: 2 / -1; 
+            grid-row: 1 / 2; 
+            grid-template-rows: auto auto auto auto auto; 
+            grid-template-columns: 1fr; 
+            grid-template-areas: 
+                "bio"
+                "residencias"
+                "premios"
+                "formacion"
+                "imagenes-bio";
+            padding: 15px; 
+        }
+    
+        footer {
+            grid-column: 1 / -1; 
+            grid-row: 2 / 3; 
+        }
+
+        .container-films, .container-bio {
+                z-index: 10; 
+            }
+    }
